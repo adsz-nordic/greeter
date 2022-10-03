@@ -1,0 +1,23 @@
+# Copyright (c) 2022 Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+config ZEPHYR_GREETER_MODULE
+	bool
+
+config GREETER
+	bool "greeter library"
+	help
+	  Library that can be used to welcome you
+
+if GREETER
+
+config GREETER_VERBOSE
+	bool "Produce longer welcome message"
+	help
+	  Be very friendly and provide longer welcome message
+
+endif # GREETER
+
+config APP_LINK_WITH_GREETER_INTERFACE
+	bool
+	default y if GREETER

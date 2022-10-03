@@ -1,0 +1,6 @@
+name: greeter
+
+build:
+  cmake: ncs
+  kconfig: Kconfig
+
